@@ -1,59 +1,285 @@
-Implemented and validated the iOS release work. Both iOS builds succeed and contain the WidgetKit extension.
+# Gold Apple
 
-### Delivered
+> A local-first Personal Computing Intelligence Layer.
 
-- First-class iOS notification initialization, permission checks/requests, scheduling, cancellation, editing, expiration handling, and restart reconciliation in [notifications.dart](/Users/uchennaanozie/Documents/hydrion/lib/services/notifications.dart).
-- No Android exact-alarm semantics applied to iOS.
-- Previously denied iOS notification permission now directs users toward Settings without repeated prompting.
-- WidgetKit Daily Progress extension in [HydrionWidgets.swift](/Users/uchennaanozie/Documents/hydrion/ios/HydrionWidgets/HydrionWidgets.swift).
-- App Group `group.com.the1807.hydrion` configured for Runner and widget.
-- Small and medium widget families, empty/stale states, accessibility progress, privacy filtering, timeline refresh, and `hydrion://home` deep linking.
-- Shared widget service now refreshes Android and iOS from canonical repository state.
-- Updated [iOS readiness documentation](/Users/uchennaanozie/Documents/hydrion/docs/IOS_READINESS.md) and [widget documentation](/Users/uchennaanozie/Documents/hydrion/widgets.md).
+Gold Apple is an intelligent software platform designed to understand a computer, its projects, repositories, services, applications, dependencies, data, processes, development history, and operational state as one connected system.
 
-### Validation
+Gold Apple is not intended to be another chatbot.
 
-- `flutter analyze`: passed, no issues.
-- Full `flutter test`: 548 passed, 2 pre-existing skipped.
-- Focused notification/widget/permission/configuration tests: 36 passed.
-- Localization and production-string audits: passed.
-- Secret scan: passed; no committed credentials or private-key blocks found.
-- `pod install`: passed.
-- iOS simulator build: passed.
-- Unsigned iOS release build: passed, 50.9 MB.
-- Both generated apps contain a compiled `HydrionWidgets.appex`.
-- Plists and Xcode project: syntax-valid.
-- Disk usage remained within approval: build directory is approximately 1.0 GB, with 48 GiB free.
+Its purpose is to create an intelligence layer above the computer that can observe, understand, explain, diagnose, secure, test, and eventually assist with operating complex computing environments.
 
-### BDD report
+## Vision
 
-- Inspected `hydrion_metrics.feature`, `load_steps.py`, and `web_steps.py`. No `environment.py` existed.
-- Added [ios_reminders.feature](/Users/uchennaanozie/Documents/hydrion/features/ios_reminders.feature) and [ios_widgets.feature](/Users/uchennaanozie/Documents/hydrion/features/ios_widgets.feature).
-- Added focused setup steps to `load_steps.py` and observable action/result steps to `web_steps.py`.
-- Avoided duplicate registrations; dry-run exit code was zero.
-- Focused result: 2 features, 18 scenarios, and 62 steps passed.
-- Broader result: the 18 new scenarios pass; the supplied 158 hydration-metrics scenarios remain explicitly pending through `StepNotImplementedError`.
-- No `assert True`, unconditional-success, or fake-passing steps were introduced.
+Modern computers contain enormous amounts of fragmented context.
 
-### Personalization and safety
+Source code exists in repositories.
 
-Repository evidence and the full passing suite confirm the existing branch already contains functional personalization:
+Runtime information exists in logs.
 
-- Valid adult body measurements affect personalized baseline.
-- Selected daily goal remains separate from calculated baseline.
-- Activity and weather affect contextual adjustments.
-- Weather remains bounded at 0–600 ml and cold weather cannot lower baseline.
-- Clinician targets and fluid-restriction safeguards remain authoritative.
-- Recommendations require confirmation and cannot automatically log water or join challenges.
-- Canonical profile, context, recommendation, history, and migration persistence tests pass.
-- Android and iOS use the same platform-neutral calculation engine.
+Dependencies exist in package managers.
 
-No health algorithm was silently changed during this work.
+History exists in Git.
 
-### Remaining blockers and verdicts
+Infrastructure exists in containers and cloud platforms.
 
-- Android v1: **BLOCKED** — this machine has no Android SDK or Java runtime, and the actual failed downloaded APK was not supplied. Release APK/AAB construction, signature inspection, and physical upgrade installation remain required. The likely cause cannot responsibly be narrowed beyond signing/artifact-pipeline possibilities without that artifact.
-- iOS v1: **READY AFTER PHYSICAL VALIDATION** — signed provisioning, real notification delivery, WidgetKit installation/refresh, App Group behavior, background operation, and deep links require a physical iPhone.
-- Hydrion v1 overall: **BLOCKED** by Android artifact validation and remaining physical-device/store work.
+Security information exists in scanners and operating-system permissions.
 
-The starting branch was `iOS_Reminder&Widget` at `9d103341de63fa66bc629e4b99005280d07758ea`. Existing staged iOS changes, staged `macos/DerivedData`, the untracked `user.name/` nested Git directory, and existing Behave work were preserved. No clone, worktree, checkpoint, reset, stash, clean, commit, push, release, or store upload was performed. Generated production builds remain untracked and no new build output was staged.
+Architectural knowledge often exists only in a developer's head.
+
+Gold Apple connects these fragments into a coherent computational model.
+
+The long-term objective is for a user to be able to ask:
+
+"Why did this application stop working yesterday?"
+
+and receive an evidence-backed explanation derived from:
+
+- repository history
+- file changes
+- dependency changes
+- runtime logs
+- configuration
+- environment differences
+- processes
+- services
+- containers
+- tests
+- operating-system events
+- previous incidents
+- known project architecture
+
+Gold Apple should understand what happened, why it happened, what is affected, and what safe actions are available.
+
+## Core Principle
+
+Gold Apple follows:
+
+Observe -> Understand -> Correlate -> Explain -> Simulate -> Act -> Verify -> Remember
+
+Actions should become progressively more autonomous only as confidence, permissions, safety controls, and verification mechanisms improve.
+
+## Product Principles
+
+### Local First
+
+User data should remain on the user's machine whenever technically practical.
+
+Cloud services are optional extensions rather than fundamental requirements.
+
+### Evidence Before Assertion
+
+Gold Apple must distinguish between:
+
+- observed facts
+- inferred conclusions
+- hypotheses
+- recommendations
+- executed actions
+
+### Read Before Write
+
+The system begins primarily as an observer.
+
+Write capabilities are introduced progressively and must be controlled by permissions and safety policies.
+
+### Reversible Operations
+
+Where practical, Gold Apple should prefer operations that can be rolled back.
+
+### Security by Design
+
+Security is an architectural requirement, not an afterthought.
+
+### Explainability
+
+Important diagnoses and actions should contain evidence showing how the conclusion was reached.
+
+### User Sovereignty
+
+The user owns:
+
+- their data
+- their project knowledge
+- their machine
+- their history
+- their configuration
+- their AI provider choices
+
+## Gold Apple Systems
+
+### GoldenCore
+
+The central orchestration and reasoning system.
+
+Responsibilities include:
+
+- task decomposition
+- capability orchestration
+- permission enforcement
+- evidence aggregation
+- planning
+- action coordination
+- verification
+
+### GoldenGraph
+
+The machine knowledge graph.
+
+Represents entities and relationships such as:
+
+- repositories
+- files
+- modules
+- services
+- processes
+- dependencies
+- commits
+- developers
+- containers
+- ports
+- APIs
+- databases
+- environments
+- configuration
+- incidents
+
+### GoldenEye
+
+Observability and diagnostic intelligence.
+
+Responsible for understanding:
+
+- logs
+- processes
+- resource utilization
+- services
+- crashes
+- runtime state
+- network activity
+- system events
+
+### GoldenGit
+
+Repository and software-history intelligence.
+
+Responsible for:
+
+- Git analysis
+- branch relationships
+- commit history
+- regression investigation
+- change attribution
+- release history
+- dependency-change correlation
+
+### GoldenShield
+
+Security intelligence.
+
+Responsible for:
+
+- secret detection
+- dependency risk
+- vulnerability information
+- configuration weaknesses
+- permissions
+- attack-surface visibility
+- security recommendations
+
+### GoldenForge
+
+Build and delivery intelligence.
+
+Responsible for:
+
+- builds
+- tests
+- packaging
+- CI/CD
+- release readiness
+- deployment workflows
+- build diagnostics
+
+### GoldenMemory
+
+Durable knowledge and historical intelligence.
+
+Stores:
+
+- architectural decisions
+- previous incidents
+- successful fixes
+- user-approved knowledge
+- project history
+- system observations
+- operational patterns
+
+### GoldenLab
+
+Safe experimentation environments.
+
+Used for:
+
+- dependency upgrades
+- migrations
+- refactors
+- patches
+- configuration changes
+- reproduction environments
+- potentially destructive experimentation
+
+before applying changes to the actual system.
+
+## Initial Platform
+
+The first development target is macOS.
+
+The architecture should remain portable enough for future Linux and Windows support.
+
+## Initial Product Strategy
+
+Gold Apple will initially operate in read-only mode.
+
+Phase one focuses on:
+
+1. discovering the local computing environment
+2. indexing software projects
+3. understanding Git repositories
+4. constructing the knowledge graph
+5. correlating development information
+6. answering questions using evidence
+
+Autonomous modification comes later.
+
+## Project Status
+
+Pre-development architecture and product specification.
+
+No production implementation should begin until the Phase 0 architecture, security, data, permission, and MVP decisions have been reviewed.
+
+## Documentation
+
+See `/docs` for product and engineering specifications.
+
+See `/specs` for individual subsystem specifications.
+
+See `AGENTS.md` for repository-specific AI engineering instructions.
+
+## Working Philosophy
+
+Gold Apple should not merely tell the user that something is broken.
+
+It should ultimately be able to explain:
+
+- what changed
+- what failed
+- when it failed
+- why it likely failed
+- what else is affected
+- how confident the diagnosis is
+- how the problem can be reproduced
+- what solutions exist
+- what risks each solution carries
+- how a proposed solution was verified
+
+That is the standard against which the system should be designed.
