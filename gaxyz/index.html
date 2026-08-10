@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Golden Apple is a local-first, evidence-driven developer intelligence platform in foundation development.">
+  <meta name="theme-color" content="#090a0c">
+  <title>Golden Apple — Developer intelligence, grounded in evidence</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav-wrap">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Golden Apple home"><span class="brand-mark">G</span><span>GOLDEN APPLE</span></a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#systems">Systems</a><a href="#architecture">Architecture</a><a href="#security">Security</a><a href="#roadmap">Roadmap</a><a href="#open-source">Open source</a>
+      </div>
+      <a class="nav-cta" href="https://github.com/vebbaybi/goldapple">View repository <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-art" role="img" aria-label="An illustrated team of software builders connecting technical evidence across a city"></div>
+      <div class="hero-shade"></div>
+      <div class="shell hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Phase 0 · Foundation in progress</div>
+        <h1>Understand what changed.<br><em>Prove why it matters.</em></h1>
+        <p>Golden Apple is a local-first intelligence layer being designed to investigate developer failures across code, Git, dependencies, diagnostics, builds, and tests—without taking control away from you.</p>
+        <div class="actions"><a class="button primary" href="#promise">Explore the foundation</a><a class="button ghost" href="../WHITEPAPER.md">Read the white paper</a></div>
+        <dl class="truth-strip"><div><dt>Current</dt><dd>Architecture &amp; specifications</dd></div><div><dt>First client</dt><dd>VS Code extension</dd></div><div><dt>MVP mode</dt><dd>Read-only investigations</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="manifesto section shell" id="promise">
+      <div class="section-label">01 / The promise</div>
+      <div class="manifesto-grid"><h2>Not another chatbot.<br>A record of <span>what is true.</span></h2><div><p class="lead">Modern development context is scattered across repositories, terminals, logs, package managers, tests, and memory. Golden Apple is designed to connect those fragments into an explainable investigation.</p><blockquote>“Why did this application stop working yesterday?”</blockquote><p>Every important answer should show its evidence, distinguish fact from inference, and state uncertainty honestly.</p></div></div>
+    </section>
+
+    <section class="doctrine section">
+      <div class="shell"><div class="section-label">02 / Operating doctrine</div><ol class="doctrine-track"><li><span>01</span>Observe</li><li><span>02</span>Understand</li><li><span>03</span>Correlate</li><li><span>04</span>Explain</li><li class="future"><span>05</span>Simulate</li><li class="future"><span>06</span>Act</li><li class="future"><span>07</span>Verify</li><li class="future"><span>08</span>Remember</li></ol><p class="doctrine-note">Autonomy advances only with explicit permission, confidence, reversibility, and independent verification. Steps marked <span></span> are beyond the read-only MVP.</p></div>
+    </section>
+
+    <section class="section shell" id="systems">
+      <div class="section-head"><div><div class="section-label">03 / Golden systems</div><h2>One investigation.<br>Eight clear responsibilities.</h2></div><p>A conceptual system map—not eight shipped products. Each boundary exists to keep evidence, authority, and failure behavior reviewable.</p></div>
+      <div class="system-grid">
+        <article class="system feature"><div class="status planned">Planned · MVP</div><span class="glyph">⌘</span><h3>GoldenCore</h3><p>Orchestrates investigations, permissions, evidence assembly, and policy.</p></article>
+        <article class="system"><div class="status planned">Planned · MVP</div><span class="glyph">◇</span><h3>GoldenGraph</h3><p>Connects repositories, changes, dependencies, diagnostics, and evidence.</p></article>
+        <article class="system"><div class="status limited">Limited MVP scope</div><span class="glyph">◉</span><h3>GoldenEye</h3><p>Normalizes approved diagnostics and command output. No ambient surveillance.</p></article>
+        <article class="system"><div class="status planned">Planned · MVP</div><span class="glyph">⑂</span><h3>GoldenGit</h3><p>Builds change history and regression evidence from local repositories.</p></article>
+        <article class="system"><div class="status foundation">Foundation controls</div><span class="glyph">⬡</span><h3>GoldenShield</h3><p>Defines trust boundaries, secret controls, and defensive analysis.</p></article>
+        <article class="system"><div class="status limited">Limited MVP scope</div><span class="glyph">△</span><h3>GoldenForge</h3><p>Turns approved build and test failures into structured evidence.</p></article>
+        <article class="system"><div class="status planned">Planned · MVP</div><span class="glyph">◎</span><h3>GoldenMemory</h3><p>Retains only user-approved, local, attributable knowledge.</p></article>
+        <article class="system"><div class="status research">Post-MVP</div><span class="glyph">⬢</span><h3>GoldenLab</h3><p>Will isolate simulations before controlled changes reach real systems.</p></article>
+      </div>
+    </section>
+
+    <section class="architecture section" id="architecture"><div class="shell architecture-grid"><div><div class="section-label">04 / Architecture</div><h2>Local by default.<br>Bounded by design.</h2><p class="lead">The VS Code client never becomes a universal authority. A local runtime mediates privileged access. Model providers receive only user-approved, minimized context through a replaceable gateway.</p><a class="text-link" href="../docs/architecture/SYSTEM_ARCHITECTURE.md">Read the system architecture →</a></div><div class="stack" aria-label="Architecture layers"><div><b>VS Code client</b><small>Consent · findings · evidence navigation</small></div><span>authenticated local IPC</span><div><b>GoldenCore + policy</b><small>Investigation · authorization · audit</small></div><div class="split"><div><b>Evidence adapters</b><small>Git · files · diagnostics · approved output</small></div><div><b>Local data</b><small>SQLite · encrypted secrets · retention</small></div></div><span>explicit provider boundary</span><div class="optional"><b>Optional model provider</b><small>Minimized request · disclosed retention · no silent upload</small></div></div></div></section>
+
+    <section class="section shell" id="security"><div class="security-card"><div><div class="section-label light">05 / Security &amp; privacy</div><h2>Your machine is not a prompt.</h2><p>Repository files can contain malicious instructions. Golden Apple treats content as evidence, never authority. Reading a workspace does not grant permission to execute code, use the network, write files, or retain data.</p></div><ul><li><b>Workspace-scoped consent</b><span>Trust is explicit, revocable, and capability-specific.</span></li><li><b>No silent cloud upload</b><span>External provider boundaries are visible before transmission.</span></li><li><b>Evidence-grade audit</b><span>Material operations record source, policy, and outcome.</span></li><li><b>Responsible disclosure</b><span>Security reports use a private route, never public issues.</span></li></ul></div></section>
+
+    <section class="section roadmap" id="roadmap"><div class="shell"><div class="section-head"><div><div class="section-label">06 / Development path</div><h2>Build trust before autonomy.</h2></div><p>No invented launch dates. Each phase advances on evidence, test gates, and security review.</p></div><div class="roadmap-line"><article class="active"><span>Now</span><h3>Foundation</h3><p>Architecture, requirements, threat model, governance, public truth.</p></article><article><span>Next</span><h3>VSIX MVP</h3><p>Read-only, cited development-failure investigations.</p></article><article><span>Planned</span><h3>VSIX V1</h3><p>Hardening, supported adapters, accounts, releases.</p></article><article class="muted"><span>Research</span><h3>Controlled actions</h3><p>Preview, simulation, rollback, independent verification.</p></article><article class="muted"><span>Research</span><h3>Agent network</h3><p>Optional identity, provenance, useful-work receipts, marketplace.</p></article></div></div></section>
+
+    <section class="section shell network"><div class="network-copy"><div class="section-label">07 / Future research</div><h2>A network only where a network earns its place.</h2><p>The proposed Golden Agent Protocol explores portable identity, capability manifests, provenance, reputation, and work receipts. Blockchain is not required for Golden Apple, the MVP, or core local intelligence. No token or network exists.</p><div class="statuses"><span>Protocol · Research</span><span>Marketplace · Research</span><span>Token · Undecided</span></div><a class="text-link" href="../docs/web3/NETWORK_VISION.md">Explore the research boundary →</a></div><div class="network-orbit" aria-hidden="true"><i></i><i></i><i></i><div>GA</div></div></section>
+
+    <section class="section shell" id="open-source"><div class="open-card"><p class="kicker">Built in the open. Grounded in review.</p><h2>Help build intelligence developers can actually trust.</h2><p>Phase 0 needs architectural critique, threat modeling, developer research, evidence-model review, and documentation—not feature hype.</p><div class="actions"><a class="button primary" href="https://github.com/vebbaybi/goldapple">Explore on GitHub ↗</a><a class="button dark" href="../CONTRIBUTING.md">Contribution guide</a></div></div></section>
+  </main>
+
+  <footer><div class="shell footer-grid"><div><a class="brand" href="#top"><span class="brand-mark">G</span><span>GOLDEN APPLE</span></a><p>Developer intelligence, grounded in evidence.</p></div><div><b>Project</b><a href="../README.md">README</a><a href="../ROADMAP.md">Roadmap</a><a href="../WHITEPAPER.md">White paper</a></div><div><b>Trust</b><a href="../SECURITY.md">Security</a><a href="../docs/data/DATA_CLASSIFICATION.md">Privacy model</a><a href="../docs/governance/PROJECT_GOVERNANCE.md">Governance</a></div><div><b>Build</b><a href="../CONTRIBUTING.md">Contribute</a><a href="https://github.com/vebbaybi/goldapple/issues">Issues</a><a href="https://github.com/vebbaybi/goldapple/discussions">Discussions</a></div></div><div class="shell fine-print"><span>Foundation only · No production release</span><span>Apache-2.0 · Artwork policy pending review</span></div></footer>
+</body>
+</html>
